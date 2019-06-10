@@ -1,7 +1,7 @@
 ---
-title: Moving lots of research data from Google Drive to a Team Drive
+title: 'Moving lots of research data from Google Drive to a Team Drive: Part One'
 date: 2019-06-07T22:22:40.536Z
-published: false
+published: true
 ---
 One of the places where I spend a great deal of my time is with the [USU Get Away Special](https://getawayspecial.usu.edu) team, and we recently ran into a problem: 
 
@@ -17,3 +17,5 @@ We wanted to continue using Google Drive, and we had two options:
 Looking at our two options, we didn't have much hope. What were we going to do?
 
 My first idea was to download a zip archive of the team resources, and then unzip it and upload it to the team drive. We started this process, but the zip creation took longer than 4 hours, and so we were back to square one, not sure what to do. Eventually, I remembered about `rclone`, a handy little tool that acts a lot like `rsync` except it's primarily for interacting with cloud data.
+
+After a little bit of `rclone` configuration, I started a sync from our original shared folder to the new Team Drive. I ran the sync from a Google Cloud Compute Instance, and it took about 36h for the first run, with a couple hours. It's now on the second run (to hopefully resolve the errors) and I'll make a part 2 once it finishes with lessons learned!
